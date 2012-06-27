@@ -1,38 +1,49 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'mysql2'
+gem 'jquery-rails', '~> 2.0.0'
+gem 'therubyracer'
+gem 'devise'
+gem 'haml'
+gem 'cancan'
+gem 'kaminari'
+gem 'simple_form'
+gem 'meta_search'
+gem 'paperclip'
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem 'remotipart'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :development do
+  gem 'ruby-debug19'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test, :development do
+  gem 'shoulda'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'rspec', '>= 2.8.0'
+  gem 'rspec-rails', '>= 2.8.0'
+  gem 'growl'
+  gem 'unicorn'
+  gem 'webrat'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'factory_girl'
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :test do
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+end
+  
